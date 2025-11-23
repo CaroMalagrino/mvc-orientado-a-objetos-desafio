@@ -1,7 +1,7 @@
 import test from "ava";
 import { ContactsCollection } from "./models";
 import * as contactsObject from "./contacts.json";
-import * as jsonfile from "jsonfile";
+import * as fs from "fs";
 
 test("Testeo el load del modelo", (t) => {
   const model = new ContactsCollection();
@@ -28,7 +28,9 @@ test("Testeo el save del modelo", (t) => {
   };
   model.addOne(mockContact);
   model.save();
-  const fileContent = jsonfile.readFileSync(__dirname + "/contacts.json");
+  const fileContent = JSON.parse(
+    fs.readFileSync(__dirname + "/contacts.json", "utf-8")
+  );
   t.deepEqual(fileContent, model.getAll());
 });
 

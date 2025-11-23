@@ -8,7 +8,9 @@
     "@ava/typescript": "^4.1.0",
     "@sindresorhus/tsconfig": "^1.0.2",
     "@types/jsonfile": "^6.1.0",
-    "ava": "^6.0.1",
+    "@types/minimist": "^1.2.5",
+    "ava": "^6.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "ava": {
