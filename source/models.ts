@@ -13,10 +13,6 @@ class Contact {
 class ContactsCollection {
   contacts: Contact[] = [];
 
-  constructor() {
-    this.load();
-  }
-
   load(): void {
     try {
       const contactsPath = path.resolve(__dirname, "contacts.json");

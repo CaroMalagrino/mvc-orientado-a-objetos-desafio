@@ -1,6 +1,6 @@
 import test from "ava";
 import { ContactsCollection } from "./models";
-import * as contactsObject from "./contacts.json";
+import contactsObject from "./contacts.json";
 import * as fs from "fs";
 
 test("Testeo el load del modelo", (t) => {

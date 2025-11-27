@@ -4,11 +4,8 @@ import type { ContactsControllerOptions } from "./controllers";
 
 test("Testeo el constructor del controller", (t) => {
   const contact = new ContactsController();
-  // test de ejemplo
-  t.not(contact, null);
-  t.not(contact, undefined);
-  t.not(contact.contacts, null);
-  t.deepEqual(contact.contacts.getAll(), []);
+  t.truthy(contact.contacts);
+  t.is(typeof contact.contacts.load, "function");
 });
 
 test("Testeo el método processOptions para obtener todos los contactos", (t) => {

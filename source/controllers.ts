@@ -9,7 +9,7 @@ class ContactsController {
   contacts: ContactsCollection;
   constructor() {
     this.contacts = new ContactsCollection();
-    this.contacts.load();
+    // this.contacts.load();
   }
 
   processOptions(options: ContactsControllerOptions) {
